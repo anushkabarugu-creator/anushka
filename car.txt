@@ -1,0 +1,35 @@
+public class ExampleforEncapsulation
+{
+   public static void main(String args[])
+   {
+       Car c=new Car();
+       c.setData("mahebdra","black",21);
+       System.out.println("the car name:"+c.getName());
+       System.out.println("the car color:"+c.getColor());
+       System.out.println("the car milage:"+c.getMilage());
+   }
+}
+class Car{
+  private  String name;
+   private String color;
+   private int milage;
+    public void setData(String x,String y,int z)
+    {
+        name=x;
+        color=y;
+        milage=z;
+        
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public String getColor()
+    {
+        return color;
+    }
+    public int getMilage()
+    {
+        return milage;
+    }
+}
