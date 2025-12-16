@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Dimentional{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int age[][][]=new int[2][3][5];
+        for(int i=1;i<=age.length;i++)
+        {
+            for(int j=1;i<=age[i].length;j++)
+            {
+                for(int k=1;k<=age[i][j].length;k++)
+                {
+                    System.out.println("enter age of students:"+k+"classroom"+j+"branch"+i);
+                    age[i][j][k]=sc.nextInt();
+                }
+            }
+        }
+    }
+}
