@@ -1,0 +1,42 @@
+public class ExampleforEncapsulation
+{
+   public static void main(String args[])
+   {
+       Student s=new Student();
+       s.setData("502","akhila","makhila@gmail.com",25);
+       System.out.println("the student rollno:"+s.getRollNo());
+       System.out.println("the student name:"+s.getName());
+       System.out.println("the student email:"+s.getEmail());
+       System.out.println("the student age:"+s.getAge());
+   }
+}
+class Student{
+  private  String rollno;
+   private String name;
+   private String email;
+   private int age;
+    public void setData(String x,String y,String z,int a)
+    {
+        rollno=x;
+        name=y;
+        email=z;
+        age=a;
+        
+    }
+    public String getRollNo()
+    {
+        return rollno;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public String getEmail()
+    {
+        return email;
+    }
+    public int getAge()
+    {
+        return age;
+    }
+}
