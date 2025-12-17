@@ -1,0 +1,68 @@
+public class ExampleOfAbstraction {
+    public static void main(String[] args){
+        CargoPlane cp=new CargoPlane();
+        PassangerPlane pp=new PassangerPlane();
+        FighterPlane fp=new FighterPlane();
+        AirPort a=new AirPort();
+        a.permit(cp);
+        a.permit(pp);
+        a.permit(fp);
+    }
+    }
+abstract class plane
+{
+    abstract void takeoff();
+    abstract void fly();
+    abstract void land();
+}
+class CargoPlane extends plane
+{
+    void takeoff()
+    {
+        System.out.println("Cargoplane is taking off");
+    }
+    void fly()
+    {
+        System.out.println("CargoPlane is flying at low heights");
+    }
+    void land()
+    {
+    System.out.println("CargoPlane is landing");
+}
+} 
+class PassangerPlane extends plane{
+    void takeoff()
+    {
+        System.out.println("PassengerPlane is taking off");
+    }
+    void fly()
+    {
+        System.out.println("PassangerPlane is flying at low heights");
+    }
+    void land()
+    {
+        System.out.println("PassangerPlane is landing");
+    }
+    }
+class FighterPlane extends plane{
+    void takeoff()
+    {
+        System.out.println("FighterPlane is taking off");
+    }
+    void fly()
+    {
+        System.out.println("FighterPlane is flying at low heights");
+    }
+    void land()
+    {
+        System.out.println("FighterPlane is landing");
+    }
+    }
+    class AirPort
+    {
+        void permit(plane ref){
+        ref.takeoff();
+        ref.fly();
+        ref.land();
+    }
+     }
