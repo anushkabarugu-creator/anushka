@@ -1,0 +1,98 @@
+import java.util.Scanner;
+public class ExampleOfAbstraction {
+    public static void main(String[] args){
+        MyCalculator m1=new MyCalculator();
+        MyCalculator2 m2=new MyCalculator2();
+        Math m=new Math();
+        m.arithmetic(m1);
+        System.out.println("-----------------");
+        m.arithmetic(m2);
+    }
+}
+abstract class Calculator{
+    abstract void add();
+    abstract void sub();
+    abstract void mul();
+    abstract void div();
+}
+class MyCalculator extends Calculator
+{
+    void add()
+    {
+        int number1=20;
+        int number2=30;
+        int sum=number1+number2;
+        System.out.println(sum);
+    }
+    void sub()
+    {
+        int number1=20;
+        int number2=30;
+        int sub=number1-number2;
+        System.out.println("The difference is:"+sub);
+    }
+    void mul()
+    {
+        int number1=20;
+        int number2=30;
+        int mul=number1*number2;
+        System.out.println("The product is:"+mul);
+    }
+    void div()
+    {
+        int number1=20;
+        int number2=30;
+        int div=number1/number2;
+        System.out.println("The quotient is:"+div);
+    }
+}
+    class MyCalculator2 extends Calculator{
+        void add()
+        {
+            Scanner s=new Scanner(System.in);
+            System.out.println("Enter the first number:");
+            int number1=s.nextInt();
+            System.out.println("Enter the second number:");
+            int number2=s.nextInt();
+            int sum=number1+number2;
+            System.out.println("enter sum number:"+sum);
+             }
+    void sub()
+    {
+        Scanner s=new Scanner(System.in);
+            System.out.println("Enter the first number:");
+            int number1=s.nextInt();
+            System.out.println("Enter the second number:");
+            int number2=s.nextInt();
+            int sub=number1-number2;
+            System.out.println("enter difference number:"+sub);
+    }
+    void mul()
+    {
+        Scanner s=new Scanner(System.in);
+            System.out.println("Enter the first number:");
+            int number1=s.nextInt();
+            System.out.println("Enter the second number:");
+            int number2=s.nextInt();
+            int mul=number1*number2;
+            System.out.println("enter product number:"+mul);
+    }
+    void div()
+        {
+             Scanner s=new Scanner(System.in);
+            System.out.println("Enter the first number:");
+            int number1=s.nextInt();
+            System.out.println("Enter the second number:");
+            int number2=s.nextInt();
+            int div=number1/number2;
+            System.out.println("enter quotient number:"+div); 
+    }
+}
+class Math{
+    void arithmetic(Calculator c){
+        c.add();
+        c.sub();
+        c.mul();
+        c.div();
+    }
+}
